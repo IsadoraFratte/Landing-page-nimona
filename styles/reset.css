@@ -1,0 +1,40 @@
+@import url('./styles.css');
+@import url('./responsive.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text: #edf1f7;
+    --pink: #94195c;
+    --rosa: #d35590;
+    --nude: #f5eaf2;
+    --lilas: #a869db;
+}
+
+a {
+    text-decoration: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+body, button, a {
+    color: var(--text);
+    font: 400 1rem "Quicksand", sans-serif;
+}
+
+#cabecalho{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+}

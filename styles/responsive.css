@@ -1,0 +1,161 @@
+@media(max-width: 1460px) {
+    main {
+        max-width: 1140px;
+    }
+
+    main img {
+        width: 380px;
+    }
+
+    header {   
+        max-width: 1140px;
+    }
+}
+
+@media(max-width: 1150px) {
+    main {
+        flex-direction: column-reverse;
+    }
+
+    main img {
+        width: 200px;
+        margin-top: 80px;
+        
+    }
+
+    header {   
+        max-width: 800px;
+    }
+
+    .nav-socials svg {
+        width: 15px;
+        width: 15px;
+    }
+
+    .nav-link {
+        font-size: 11px;
+    }
+
+    .main-info p {
+        font-size: 15px;
+        margin: 30px 0 20px;
+    }
+
+    .main-info {
+        max-width: 520px;
+    }
+}
+
+@media(max-width: 810px) {
+    header {   
+        max-width: 400px;
+    }
+
+    .nav-link {
+        position: relative;
+    }
+
+    .nav-socials {
+        flex-direction: column;
+        position: absolute;
+        left: 50px;
+        top: 200px;
+        gap: 20px;
+    }
+}
+
+@media(max-width: 750px) {
+    .hamburger {
+        display: block;
+        z-index: 1;
+    }
+    .nav-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--rosa);
+
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .nav-list a {
+        font-size: 24px;
+        opacity: 0;
+    }
+
+    .nav-list li:nth-child(1) a {
+        transition: 0.5s 0.2s;
+    }
+
+    .nav-list li:nth-child(2) a {
+        transition: 0.5s 0.4s;
+    }
+
+    .nav-list li:nth-child(3) a {
+        transition: 0.5s 0.6s;
+    }
+
+    .nav-list li:nth-child(4) a {
+        transition: 0.5s 0.8s;
+    }
+
+    /*estilo ativos*/
+
+    .nav.active .nav-list {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+        z-index: 2;
+    }
+    
+    .nav.active .nav-list a {
+        opacity: 1;
+    }
+
+    .nav.active .hamburger {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+        z-index: 3;
+    }
+    
+    .nav.active .hamburger::before {
+        transform: rotate(135deg);
+ 
+    }
+    
+    .nav.active .hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    /*outros*/
+
+    .main-info p {
+        font-size: 14px;
+        padding: 0 40px 0 40px;
+    }
+
+    .main-info div {
+        padding: 0 40px 0 40px;
+    }
+
+    .main-info div a, .main-info div button {
+        font-size: 14px;
+    }
+
+    .main-info img {
+        width: 150px;
+        padding-left: 40px;
+    }
+}
